@@ -1,5 +1,11 @@
 @import "variables";
 
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
 .article-container {
   display: flex;
   flex-direction: column;
@@ -7,4 +13,54 @@
   background-color: $accent-color;
   padding: 1rem;
   border-radius: $small-radius;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.article {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content {
+  max-width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  div {
+    text-align: justify;
+    align-self: end;
+    font-style: italic;
+  }
+}
+
+.comments-container {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  margin-bottom: 20px;
+
+  h3 {
+    margin-bottom: 30px;
+  }
+}
+
+.comments {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form {
+  display: flex;
+  gap: 10px;
 }
