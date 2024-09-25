@@ -1,4 +1,6 @@
 # WildBlog
+![CleanShot 2024-09-25 at 14 30 57@2x](https://github.com/user-attachments/assets/80b8a6d2-d15a-4a32-bf45-e0f90e9eb210)
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.9.
 
