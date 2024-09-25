@@ -1,0 +1,10 @@
+@import "variables";
+
+.article-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  background-color: $accent-color;
+  padding: 1rem;
+  border-radius: $small-radius;
+}

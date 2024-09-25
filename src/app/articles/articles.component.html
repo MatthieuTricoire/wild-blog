@@ -1,0 +1,5 @@
+<div class="articles-container">
+  @for (article of articles; track article.title) {
+    <app-article [article]="article" />
+  }
+</div>
