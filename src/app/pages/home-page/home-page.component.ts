@@ -5,6 +5,7 @@ import { ArticleComponent } from '../../articles/article/article.component';
 import { ArticlesComponent } from '../../articles/articles.component';
 import { CommonModule } from '@angular/common';
 import { Router, RouterLink } from '@angular/router';
+import { ContactFormComponent } from '../../components/contact-form/contact-form.component';
 
 @Component({
   selector: 'app-home-page',
@@ -15,6 +16,7 @@ import { Router, RouterLink } from '@angular/router';
     ArticlesComponent,
     CommonModule,
     RouterLink,
+    ContactFormComponent,
   ],
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.scss',

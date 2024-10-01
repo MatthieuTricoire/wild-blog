@@ -1,0 +1,26 @@
+form {
+  margin-block: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+
+  fieldset {
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 4px;
+
+    .error {
+      color: #fe6682;
+      font-size: 0.652rem;
+    }
+  }
+
+  .btn-container {
+    display: flex;
+    gap: 1rem;
+  }
+}

@@ -1,0 +1,74 @@
+<form #contactForm="ngForm" (ngSubmit)="contactForm.valid && onSubmit()">
+  <fieldset>
+    <label for="firstName">Prénom</label>
+    <input
+      type="text"
+      name="firstName"
+      id="firstName"
+      required
+      minlength="2"
+      maxlength="15"
+      [(ngModel)]="enteredContactValues.firstName"
+      #firstName="ngModel"
+    />
+    @if (firstName.errors && contactForm.submitted) {
+      @if (firstName.errors["required"]) {
+        <p class="error">Le prénom est requis</p>
+      }
+      @if (firstName.errors["minlength"]) {
+        <p class="error">Le prénom doit contenir au minimum 2 caractères</p>
+      }
+      @if (firstName.errors["maxlength"]) {
+        <p class="error">Le prénom doit contenir au maximum 15 caractères</p>
+      }
+    }
+  </fieldset>
+  <fieldset>
+    <label for="lastName">Nom</label>
+    <input
+      type="text"
+      name="lastName"
+      id="lastName"
+      required
+      minlength="2"
+      maxlength="15"
+      [(ngModel)]="enteredContactValues.lastName"
+      #lastName="ngModel"
+    />
+    @if (lastName.errors && contactForm.submitted) {
+      @if (lastName.errors["required"]) {
+        <p class="error">Le nom est requis</p>
+      }
+      @if (lastName.errors["minlength"]) {
+        <p class="error">Le nom doit contenir au minimum 2 caractères</p>
+      }
+      @if (lastName.errors["maxlength"]) {
+        <p class="error">Le nom doit contenir au maximum 15 caractères</p>
+      }
+    }
+  </fieldset>
+  <fieldset>
+    <label for="email">Email</label>
+    <input
+      type="email"
+      name="email"
+      id="email"
+      required
+      [(ngModel)]="enteredContactValues.email"
+      #email="ngModel"
+    />
+    @if (email.errors && contactForm.submitted) {
+      @if (email.errors["required"]) {
+        <p class="error">L'email est requis.</p>
+      }
+      @if (email.errors["email"]) {
+        <p class="error">L'email doit être valide.</p>
+      }
+    }
+  </fieldset>
+
+  <div class="btn-container">
+    <button type="submit">Envoyer</button>
+    <button type="reset">Réinitialiser</button>
+  </div>
+</form>
