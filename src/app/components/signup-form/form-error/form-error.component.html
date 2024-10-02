@@ -1,0 +1,18 @@
+@if (control()?.touched && control()?.errors) {
+  <div class="error">
+    @if (control()?.errors?.["required"]) {
+      <span>Ce champ est requis</span>
+    } @else if (control()?.errors?.["minlength"]) {
+      <span>Minimun de 3 caractères</span>
+    } @else if (control()?.errors?.["email"]) {
+      <span>Format de l'email incorrect.</span>
+    } @else if (control()?.errors?.["securePassword"]) {
+      <span
+        >Le mot de passe doit contenir au moins une minuscule, une majuscule, un
+        chiffre, un caractère spécial et doit faire au moins 12 caractères
+      </span>
+    } @else if (control()?.errors?.["mismatchPassword"]) {
+      <span>Les mots de passes ne sont pas identiques</span>
+    }
+  </div>
+}
