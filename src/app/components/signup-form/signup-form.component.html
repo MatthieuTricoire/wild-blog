@@ -1,0 +1,53 @@
+<form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+  <fieldset>
+    <label for="username">Username</label>
+    <input
+      type="text"
+      name="username"
+      value=""
+      id="username"
+      formControlName="username"
+    />
+    <app-form-error [control]="signUpForm.get('username')" />
+  </fieldset>
+
+  <fieldset>
+    <label for="email">Email</label>
+    <input
+      type="email"
+      name="email"
+      value=""
+      id="email"
+      formControlName="email"
+    />
+    <app-form-error [control]="signUpForm.get('email')" />
+  </fieldset>
+
+  <div formGroupName="passwords">
+    <fieldset>
+      <label for="password">Mot de passe</label>
+      <input
+        type="password"
+        name="password"
+        value=""
+        id="password"
+        formControlName="password"
+      />
+      <app-form-error [control]="signUpForm.get('passwords.password')" />
+    </fieldset>
+
+    <fieldset>
+      <label for="confirmPassword">Confirmez mot de passe</label>
+      <input
+        type="password"
+        name="confirmPassword"
+        value=""
+        id="confirmPassword"
+        formControlName="confirmPassword"
+      />
+      <app-form-error [control]="signUpForm.get('passwords')" />
+    </fieldset>
+  </div>
+
+  <button type="submit" [disabled]="!signUpForm.valid">S'inscrire</button>
+</form>
