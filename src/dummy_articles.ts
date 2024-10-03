@@ -7,6 +7,7 @@ export const DUMMY_ARTICLES = [
     author: 'Reichel LLC',
     img: 'https://placehold.co/400',
     isPublished: false,
+    isFavorite: false,
   },
   {
     id: 2,
@@ -16,6 +17,7 @@ export const DUMMY_ARTICLES = [
     author: 'Aufderhar - Kerluke',
     img: 'https://placehold.co/400',
     isPublished: false,
+    isFavorite: false,
   },
   {
     id: 3,
@@ -25,6 +27,7 @@ export const DUMMY_ARTICLES = [
     author: 'Koepp, Prosacco and Fisher',
     img: 'https://placehold.co/400',
     isPublished: false,
+    isFavorite: false,
   },
 ];
 
@@ -38,6 +41,7 @@ export const DUMMY_ARTICLES_DIRECTIVES_QUEST = [
     isPublished: true,
     comment: '',
     likes: 120,
+    isFavorite: false,
   },
   {
     id: 2,
@@ -47,6 +51,7 @@ export const DUMMY_ARTICLES_DIRECTIVES_QUEST = [
     image: 'https://via.placeholder.com/350x150',
     isPublished: true,
     comment: '',
+    isFavorite: false,
     likes: 75,
   },
   {
@@ -57,6 +62,7 @@ export const DUMMY_ARTICLES_DIRECTIVES_QUEST = [
     image: 'https://via.placeholder.com/350x150',
     isPublished: true,
     comment: '',
+    isFavorite: false,
     likes: 101,
   },
   {
@@ -67,6 +73,7 @@ export const DUMMY_ARTICLES_DIRECTIVES_QUEST = [
     image: 'https://via.placeholder.com/350x150',
     isPublished: true,
     comment: '',
+    isFavorite: false,
     likes: 200,
   },
   {
@@ -77,6 +84,7 @@ export const DUMMY_ARTICLES_DIRECTIVES_QUEST = [
     image: 'https://via.placeholder.com/350x150',
     isPublished: true,
     comment: '',
+    isFavorite: false,
     likes: 200,
   },
 ];

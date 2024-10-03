@@ -1,7 +1,22 @@
+@import "variables";
+
 .article-card {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  position: relative;
+
+  .favorite-icon {
+    position: absolute;
+    top: -7px;
+    right: -7px;
+    transition: all;
+
+    &:hover {
+      scale: 1.1;
+      rotate: 5deg;
+    }
+  }
 
   h2 {
     font-size: 1rem;

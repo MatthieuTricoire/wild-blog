@@ -6,6 +6,7 @@ import { ContactFormComponent } from '../../components/contact-form/contact-form
 import { SignupFormComponent } from '../../components/signup-form/signup-form.component';
 import { CardComponent } from '../../components/shared/card/card.component';
 import { ArticleCardComponent } from '../../components/articles/article-card/article-card.component';
+import { Article } from '../../models/article.model';
 
 @Component({
   selector: 'app-home-page',
@@ -24,9 +25,14 @@ import { ArticleCardComponent } from '../../components/articles/article-card/art
 export class HomePageComponent {
   router: Router = inject(Router);
   title = 'Bienvenue sur le Wild Blog de Matthieu !';
-  articles = DUMMY_ARTICLES_DIRECTIVES_QUEST;
+  articles: Article[] = DUMMY_ARTICLES_DIRECTIVES_QUEST;
 
   goTo(id: number) {
     this.router.navigate(['/article/', id]);
+  }
+
+  addToFavorite(id: number) {
+    const articleToUpdate = this.articles.filter((a) => a.id === id);
+    articleToUpdate[0].isFavorite = !articleToUpdate[0].isFavorite;
   }
 }

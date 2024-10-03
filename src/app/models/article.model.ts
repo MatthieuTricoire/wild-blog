@@ -7,4 +7,5 @@ export interface Article {
   comment: string;
   likes: number;
   image: string;
+  isFavorite: boolean;
 }

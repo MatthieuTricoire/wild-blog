@@ -1,5 +1,11 @@
 <app-card>
   <div class="article-card">
+    <lucide-angular
+      (click)="onFavorite($event)"
+      [ngStyle]="{ color: article().isFavorite ? 'red' : 'inherit' }"
+      [img]="Heart"
+      class="favorite-icon"
+    ></lucide-angular>
     <h2>{{ article().title }}</h2>
     <img [src]="article().image" />
     <p>{{ article().content }}</p>
