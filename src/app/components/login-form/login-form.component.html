@@ -1,0 +1,35 @@
+<form #formRef="ngForm" (ngSubmit)="onSubmit()">
+  <fieldset>
+    <label for="username">Username</label>
+    <input
+      type="text"
+      name="username"
+      id="username"
+      [(ngModel)]="formData().username"
+      required
+      #usernameRef="ngModel"
+    />
+    @if (usernameRef.errors && usernameRef.errors["required"]) {
+      <p [hidden]="usernameRef.pristine" class="error">
+        Ce champ est obligatoire.
+      </p>
+    }
+  </fieldset>
+  <fieldset>
+    <label for="password">Password</label>
+    <input
+      type="password"
+      name="password"
+      id="password"
+      [(ngModel)]="formData().password"
+      required
+      minlength="8"
+      #passwordRef="ngModel"
+    />
+    @if (passwordRef.errors && passwordRef.errors["required"]) {
+      <p class="error">Ce champ est obligatoire.</p>
+    }
+  </fieldset>
+
+  <button type="submit" [disabled]="!formRef.form.valid">Se connecter</button>
+</form>

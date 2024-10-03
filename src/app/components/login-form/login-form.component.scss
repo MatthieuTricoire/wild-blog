@@ -1,0 +1,39 @@
+@import "variables";
+
+form {
+  max-width: 300px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    .ng-pristine {
+      border-color: palevioletred;
+    }
+    .ng-invalid {
+      border-color: $error-color;
+    }
+
+    .ng-valid {
+      border-color: $success-color;
+    }
+    input {
+      all: unset;
+      padding-inline: 5px;
+      padding-block: 3px;
+      border: 2px solid $accent-color;
+      border-radius: 5px;
+    }
+
+    .error {
+      color: $error-color;
+      align-self: end;
+      font-size: 0.625rem;
+    }
+  }
+}
