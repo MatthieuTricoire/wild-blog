@@ -1,25 +1,7 @@
 <main class="main">
-  @if (isAnyArticlePublished) {
-    <div class="articles-container">
-      @for (article of articles; track article.title) {
-        @if (article.isPublished) {
-          <div class="article-container" (click)="goTo(article.id)">
-            <h2
-              [ngClass]="{ 'popular-article': article.likes > 100 }"
-              [ngStyle]="{ color: article.likes > 150 ? 'green' : 'inherit' }"
-            >
-              {{ article.title }}
-            </h2>
-            <p>{{ article.content }}</p>
-            <a [routerLink]="['/article', article.id]">Voir l'article</a>
-          </div>
-        }
-      }
-    </div>
-  } @else {
-    <p>Aucun article publié</p>
-  }
-
-  <app-contact-form />
-  <app-signup-form />
+  <div class="articles-container">
+    @for (article of articles; track article.id) {
+      <app-article-card (click)="goTo(article.id)" [article]="article" />
+    }
+  </div>
 </main>
