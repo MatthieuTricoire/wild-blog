@@ -1,0 +1,13 @@
+@import "variables";
+
+div {
+  border: 1px solid $accent-color;
+  padding: 15px;
+  box-shadow: $accent-color 0px 7px 29px 0px;
+  border-radius: 10px;
+  cursor: pointer;
+
+  &:hover {
+    border-color: lighten($color: $accent-color, $amount: 10);
+  }
+}
