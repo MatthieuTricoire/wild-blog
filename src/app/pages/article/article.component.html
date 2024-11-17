@@ -1,3 +1,21 @@
-<p>Contenu de l'articl {{ articleId }} sera publié prochainement.</p>
+<app-center-container>
+  @if (!article) {
+    <div>Aucun article, désolé</div>
+  } @else {
+    <div class="article-container">
+      <div class="article-header">
+        <h1>{{ article.title }}</h1>
+        <span>
+          <lucide-angular [img]="heart" class="favorite-icon"></lucide-angular>
+          {{ article.likeCount }}</span
+        >
+      </div>
 
-<button (click)="goTo()">Retour aux articles</button>
+      <img src="{{ article.image }}" alt="Image de l'article" />
+
+      <p>{{ article.content }}</p>
+    </div>
+  }
+
+  <button (click)="goTo()">Retour aux articles</button>
+</app-center-container>

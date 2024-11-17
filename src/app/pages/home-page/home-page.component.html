@@ -1,11 +1,3 @@
 <main class="main">
-  <div class="articles-container">
-    @for (article of articles; track article.id) {
-      <app-article-card
-        (click)="goTo(article.id)"
-        [article]="article"
-        (favoriteArticle)="addToFavorite($event)"
-      />
-    }
-  </div>
+  <app-articles-list />
 </main>

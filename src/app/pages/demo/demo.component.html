@@ -1,0 +1,27 @@
+<div>
+  <div class="btn-container">
+    <app-button
+      (buttonName)="handleButtonClicked($event)"
+      [buttonText]="'Foo'"
+      [buttonColor]="'green'"
+    />
+    <app-button
+      (buttonName)="handleButtonClicked($event)"
+      [buttonText]="'Bar'"
+      [buttonColor]="'blue'"
+    />
+    <app-button
+      (buttonName)="handleButtonClicked($event)"
+      [buttonText]="'Toto'"
+      [buttonColor]="'pinkg'"
+    />
+    <app-button
+      (buttonName)="handleButtonClicked($event)"
+      [buttonText]="'Titi'"
+      [buttonColor]="'red'"
+    />
+  </div>
+  @if (buttonClicked) {
+    <div>Tu viens de cliquer sur {{ buttonClicked }}.</div>
+  }
+</div>

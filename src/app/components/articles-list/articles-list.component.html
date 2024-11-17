@@ -1,0 +1,5 @@
+<div class="articles-container">
+  @for (article of articles$ | async; track $index) {
+    <app-article-card (click)="goTo(article.id)" [article]="article" />
+  }
+</div>

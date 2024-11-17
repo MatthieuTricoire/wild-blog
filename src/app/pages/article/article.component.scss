@@ -1,0 +1,17 @@
+.article-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .article-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    span {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+  }
+}
